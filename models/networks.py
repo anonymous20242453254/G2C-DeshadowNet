@@ -84,10 +84,10 @@ class Generator(nn.Module):
         model += ResnetBlock()
         
         model += crop2patches(4)
-        model += [nn.MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride = 1, padding=1, bias=True)]
-        model += [nn.MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1, bias=True)]
-        model += [nn.MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1, bias=True)]
-        model += [nn.MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1, bias=True)]
+        model += [MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride = 1, padding=1, bias=True)]
+        model += [MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1, bias=True)]
+        model += [MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1, bias=True)]
+        model += [MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1, bias=True)]
         model += back2map(8)
 
 
@@ -112,10 +112,10 @@ class Generator(nn.Module):
         
         model2 += crop2patches(4)
 
-        model2 += [nn.MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1, bias=True)]
-        model2 += [nn.MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1, bias=True)]
-        model2 += [nn.MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1, bias=True)]
-        model2 += [nn.MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1, bias=True)]
+        model2 += [MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1, bias=True)]
+        model2 += [MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1, bias=True)]
+        model2 += [MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1, bias=True)]
+        model2 += [MultiHeadDotProductAttention(), nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1, bias=True)]
         
         model2 += back2map(8)
 
